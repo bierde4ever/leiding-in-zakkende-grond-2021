@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TITEL</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
+</head>
+
+<body>
+  <section id="hero" class="container">
+    <h1>Leiding in zakkende grond</h1>
+    <p>
+      Ondersteunde leiding in zakkende grond</p>
+    <p>
+  </section>
+  <section class="container">
+    <div class="row">
+      <div class="col-4">
+        <div class="row mb-1">
+          <label for="edtD" class="col-6 col-form-label">Diameter</label>
+          <div class="col-5">
+            <div class="input-group">
+              <input name="edtD" type="number" value="0.118" step="0.001" id="edtD" class="form-control text-end" />
+              <span class="input-group-text w-50">m</span>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-1">
+          <label for="edtW" class="col-6 col-form-label">Wanddikte</label>
+          <div class="col-5">
+            <div class="input-group">
+              <input name="edtW" type="number" value="0.009" step="0.001" id="edtW" class="form-control text-end" />
+              <span class="input-group-text w-50">m</span>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-1">
+          <label for="edtE" class="col-6 col-form-label">E modulus</label>
+          <div class="col-5">
+            <div class="input-group">
+              <input name="edtE" type="number" value="75" id="edtE" class="form-control text-end" />
+              <span class="input-group-text w-50">GPa</span>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-1">
+          <label for="edtT" class="col-6 col-form-label">Treksterkte</label>
+          <div class="col-5">
+            <div class="input-group">
+              <input name="edtT" type="number" value="150" id="edtT" class="form-control text-end" />
+              <span class="input-group-text w-50">MPa</span>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-1">
+          <label for="edtP" class="col-6 col-form-label">Speling verbinding</label>
+          <div class="col-5">
+            <div class="input-group">
+              <input name="edtP" type="number" value="2.9" step="0.1" id="edtP" class="form-control text-end" />
+              <span class="input-group-text w-50">&Acirc;&deg;</span>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-1">
+          <label for="edtL" class="col-6 col-form-label">Lengte segment</label>
+          <div class="col-5">
+            <div class="input-group">
+              <input name="edtL" type="number" value="6" id="edtL" class="form-control text-end" />
+              <span class="input-group-text w-50">m</span>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-1">
+          <label for="edtJ" class="col-6 col-form-label">Locatie verbindingen</label>
+          <div class="col-5">
+            <div class="input-group">
+              <input name="edtJ" type="number" value="1" id="edtJ" class="form-control text-end" />
+              <span class="input-group-text w-50">m</span>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-1">
+          <label for="edtH" class="col-6 col-form-label">Hoogte paal</label>
+          <div class="col-5">
+            <div class="input-group">
+              <input name="edtH" type="number" value="0.03" step="0.01" id="edtH" class="form-control text-end" />
+              <span class="input-group-text w-50">m</span>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-1">
+          <label for="edtR" class="col-6 col-form-label">Dichtheid grond</label>
+          <div class="col-5">
+            <div class="input-group">
+              <input name="edtR" type="number" value="1522" id="edtR" class="form-control text-end" />
+              <span class="input-group-text w-50">kg/m<sup>3</sup></span>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-1">
+          <label for="edtC" class="col-6 col-form-label">Gronddek</label>
+          <div class="col-5">
+            <div class="input-group">
+              <input name=" edtC" type="number" value="0.225" id="edtC" step="0.001" class="form-control text-end" />
+              <span class="input-group-text w-50">m</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-8">
+        <div class="row">
+          <div class="col-2">
+            <input type="checkbox" id="cbMoment" name="cbMoment">
+            <label for="cbMoment">Moment</label>
+          </div>
+          <div class="col-2">
+            <input type="checkbox" id="cbInclinate" name="cbInclinate">
+            <label for="cbInclinate">Inclinatie</label>
+          </div>
+          <div class="col-2">
+            <input type="checkbox" id="cbAutoScale" name="cbAutoScale">
+            <label for="cbAutoScale">Autoschaal</label>
+          </div>
+        </div>
+        <div> <canvas width="500" height="400" id="myCanvas"></canvas>
+        </div>
+        <div id="calculation-output">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="handleiding" class="container">
+    <h2>Handleiding</h2>
+    <ul>
+      <li>
+        Vul juiste waarden in voor de diverse parameters.</li>
+      <li>
+        Rekenresultaten worden in de grafiek en onder de grafiek weergeven.</li>
+    </ul>
+    <p>Uitleg parameters:</p>
+    <dl class="row">
+      <dt class="col-2">Diameter</dt>
+      <dd class="col-10">De diameter van de leiding in meters.</dd>
+      <dt class="col-2">Wanddikte</dt>
+      <dd class="col-10">Wanddikte van de leiding in meters.</dd>
+      <dt class="col-2">E-modulus</dt>
+      <dd class="col-10">E-modulus van het buismateriaal in Gigapascal.</dd>
+      <dt class="col-2"> Trekstrerkte</dt>
+      <dd class="col-10"> Treksterkte van het buismateriaal in Megapascal (Waarden die de treksterkte overstijgen worden
+        in de grafiek rood weergegeven).</dd>
+      <dt class="col-2"> Speling verbinding</dt>
+      <dd class="col-10"> Hoek die de buis t.o.v. de verbinding kan maken.</dd>
+      <dt class="col-2"> Lengte segment</dt>
+      <dd class="col-10"> Lengte van een leidingsegment in meters.</dd>
+      <dt class="col-2"> Locatie verbindingen</dt>
+      <dd class="col-10"> Afstand van de verbindingen tot de ondersteuning.</dd>
+      <dt class="col-2"> Hoogte paal</dt>
+      <dd class="col-10"> Hoogteverschil tussen het ondersteunde deel van de leiding en de verzakte leiding in meters.
+      </dd>
+      <dt class="col-2"> Dichtheid grond</dt>
+      <dd class="col-10"> Dichtheid van de grond waar de leiding in ligt.</dd>
+      <dt class="col-2"> Gronddek</dt>
+      <dd class="col-10"> Gronddek boven de leiding (verzakte gedeelte) in meters.</dd>
+    </dl>
+
+    <p>
+      Uitleg rekenresultaten</p>
+    <p>De resultaten worden in de grafiek weergegeven. Op de x-as wordt de afstand tot de ondersteuning weergegeven. Het
+      midden van de grafiek (nulpunt op de x-as) is de locatie waar de leiding wordt ondersteund. Met rondjes worden de
+      verbinidngen gemarkeerd. Met rood wordt het leidinggedeelte gemarkeerd waar de krachten de treksterkte
+      overschreiden. Indien Moment en Inclinatie zijn aangevinkt, dan wordt het verloop hiervan eveneens in de
+      grafiek weergegeven.</p>
+    <p>Verder worden onder de grafiek en onder de knop een aantal rekenresultaten gepresenteerd:</p>
+    <dl class="row">
+      <dt class="col-2">Beginpunt</dt>
+      <dd class="col-10">Punt waar de spanning in de leiding begint (afstand t.o.v. de ondersteuning, zie grafiek)</dd>
+      <dt class="col-2">Eindpunt</dt>
+      <dd class="col-10">Punt waar de spanning in de leiding begint (afstand t.o.v. de ondersteuning, zie grafiek)</dd>
+      <dt class="col-2">Kracht paal</dt>
+      <dd class="col-10">Kracht die de paal op de leiding uitoefent.</dd>
+      <dt class="col-2">Maximum spanning</dt>
+      <dd class="col-10">Maximum spanning die in de leiding voorkomt als gevolg van de krachten op de leiding.</dd>
+      <dt class="col-2">Hoek</dt>
+      <dd class="col-10">In de tekstboks onder de grafiek staan de hoeken die ontstaan bij de verbindingen (afstand is
+        gegeven t.o.v.
+        de ondersteuning, zie grafiek).</dd>
+    </dl>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>

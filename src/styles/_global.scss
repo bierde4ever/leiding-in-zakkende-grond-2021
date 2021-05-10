@@ -1,0 +1,30 @@
+@use "variables";
+
+body {
+  margin: 0;
+  background-color: variables.$bg;
+  color: var(--text);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  margin: 10px;
+  font-size: 1.5rem;
+  border-radius: 5px;
+}
+
+section#calculation {
+  background-color: lightgrey;
+  padding: 10px;
+}
+
+ul.none {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0em;
+}
